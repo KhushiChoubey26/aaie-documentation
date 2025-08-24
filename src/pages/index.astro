@@ -3,6 +3,22 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="AAIE Documentation">
+  <!-- Navigation Header -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-bold text-gray-900">AAIE Documentation</div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-600 hover:text-gray-900">Home</a>
+          <a href="/aaie/overview/" class="text-gray-600 hover:text-gray-900">Core AAIE</a>
+          <a href="/aaie-data-hub/overview/" class="text-gray-600 hover:text-gray-900">Data Hub</a>
+          <a href="/aaie-model-lab/overview/" class="text-gray-600 hover:text-gray-900">Model Lab</a>
+          <a href="/aaie-design-engineering/overview/" class="text-gray-600 hover:text-gray-900">Design Engineering</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <main class="container mx-auto px-4 py-8">
     <!-- Hero Section -->
     <div class="text-center mb-12">
@@ -15,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Documentation Sections Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       <!-- Core AAIE -->
       <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
         <h2 class="text-2xl font-semibold text-gray-900 mb-3">Core AAIE</h2>
@@ -81,6 +97,16 @@ import Layout from '../layouts/Layout.astro';
           Explore →
         </a>
       </div>
+    </div>
+
+    <!-- Getting Started Section -->
+    <div class="bg-blue-50 rounded-lg p-6 text-center">
+      <h2 class="text-lg font-semibold text-blue-900 mb-2">Getting Started</h2>
+      <p class="text-blue-700 mb-4">
+        Choose a section above to explore the documentation, or check out our 
+        <a href="/forking-worflow/overview/" class="underline font-medium">forking workflow</a> 
+        to understand how to contribute.
+      </p>
     </div>
   </main>
 </Layout>
