@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { formatDate } from '../../utils/date';
 
+export const prerender = true;
+
 // Generate static paths for all documentation pages
 export async function getStaticPaths() {
   const docs = await getCollection('docs');
@@ -39,6 +41,7 @@ export async function getStaticPaths() {
     })),
   ];
 
+  console.log('Generated paths:', paths.map(p => p.params.slug));
   return paths;
 }
 
