@@ -206,14 +206,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"deprecated">
 } & { render(): Render[".md"] };
 };
-"docs": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "docs";
-  data: any;
-  render(): Render[".md"];
-}>;
 "forking-worflow": {
 "contribution-overview.md": {
 	id: "contribution-overview.md";
@@ -265,22 +257,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"forking-worflow">
 } & { render(): Render[".md"] };
 };
-"meetings": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "meetings";
-  data: any;
-  render(): Render[".md"];
-}>;
-"tech-refs": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "tech-refs";
-  data: any;
-  render(): Render[".md"];
-}>;
 
 	};
 
