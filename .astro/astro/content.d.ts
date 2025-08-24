@@ -140,39 +140,147 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"docs": Record<string, {
+		"aaie": {
+"overview.md": {
+	id: "overview.md";
+  slug: "overview";
+  body: string;
+  collection: "aaie";
+  data: InferEntrySchema<"aaie">
+} & { render(): Render[".md"] };
+};
+"aaie-data-hub": {
+"overview.md": {
+	id: "overview.md";
+  slug: "overview";
+  body: string;
+  collection: "aaie-data-hub";
+  data: InferEntrySchema<"aaie-data-hub">
+} & { render(): Render[".md"] };
+};
+"aaie-design-engineering": {
+"overview.md": {
+	id: "overview.md";
+  slug: "overview";
+  body: string;
+  collection: "aaie-design-engineering";
+  data: InferEntrySchema<"aaie-design-engineering">
+} & { render(): Render[".md"] };
+};
+"aaie-model-lab": {
+"overview.md": {
+	id: "overview.md";
+  slug: "overview";
+  body: string;
+  collection: "aaie-model-lab";
+  data: InferEntrySchema<"aaie-model-lab">
+} & { render(): Render[".md"] };
+};
+"deprecated": {
+"archive-overview.md": {
+	id: "archive-overview.md";
+  slug: "archive-overview";
+  body: string;
+  collection: "deprecated";
+  data: InferEntrySchema<"deprecated">
+} & { render(): Render[".md"] };
+"sprint-goals.md": {
+	id: "sprint-goals.md";
+  slug: "sprint-goals";
+  body: string;
+  collection: "deprecated";
+  data: InferEntrySchema<"deprecated">
+} & { render(): Render[".md"] };
+"team-proposal.md": {
+	id: "team-proposal.md";
+  slug: "team-proposal";
+  body: string;
+  collection: "deprecated";
+  data: InferEntrySchema<"deprecated">
+} & { render(): Render[".md"] };
+"weekly-workflow-automation.md": {
+	id: "weekly-workflow-automation.md";
+  slug: "weekly-workflow-automation";
+  body: string;
+  collection: "deprecated";
+  data: InferEntrySchema<"deprecated">
+} & { render(): Render[".md"] };
+};
+"docs": Record<string, {
   id: string;
   slug: string;
   body: string;
   collection: "docs";
-  data: InferEntrySchema<"docs">;
+  data: any;
   render(): Render[".md"];
 }>;
-"meetings": {
-"scrum-meeting-2024-01-15.md": {
-	id: "scrum-meeting-2024-01-15.md";
-  slug: "scrum-meeting-2024-01-15";
+"forking-worflow": {
+"contribution-overview.md": {
+	id: "contribution-overview.md";
+  slug: "contribution-overview";
   body: string;
-  collection: "meetings";
-  data: InferEntrySchema<"meetings">
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
 } & { render(): Render[".md"] };
-"test-meeting-2024-01-20.md": {
-	id: "test-meeting-2024-01-20.md";
-  slug: "test-meeting-2024-01-20";
+"contributor-workflow.md": {
+	id: "contributor-workflow.md";
+  slug: "contributor-workflow";
   body: string;
-  collection: "meetings";
-  data: InferEntrySchema<"meetings">
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
+} & { render(): Render[".md"] };
+"folder-structure-policy.md": {
+	id: "folder-structure-policy.md";
+  slug: "folder-structure-policy";
+  body: string;
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
+} & { render(): Render[".md"] };
+"guidelines-and-enforcement.md": {
+	id: "guidelines-and-enforcement.md";
+  slug: "guidelines-and-enforcement";
+  body: string;
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
+} & { render(): Render[".md"] };
+"overview.md": {
+	id: "overview.md";
+  slug: "overview";
+  body: string;
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
+} & { render(): Render[".md"] };
+"pr-review-process.md": {
+	id: "pr-review-process.md";
+  slug: "pr-review-process";
+  body: string;
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
+} & { render(): Render[".md"] };
+"repository-structure.md": {
+	id: "repository-structure.md";
+  slug: "repository-structure";
+  body: string;
+  collection: "forking-worflow";
+  data: InferEntrySchema<"forking-worflow">
 } & { render(): Render[".md"] };
 };
-"tech-refs": {
-"api-endpoints.md": {
-	id: "api-endpoints.md";
-  slug: "api-endpoints";
+"meetings": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "meetings";
+  data: any;
+  render(): Render[".md"];
+}>;
+"tech-refs": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "tech-refs";
-  data: InferEntrySchema<"tech-refs">
-} & { render(): Render[".md"] };
-};
+  data: any;
+  render(): Render[".md"];
+}>;
 
 	};
 

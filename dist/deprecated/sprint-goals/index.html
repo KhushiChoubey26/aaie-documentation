@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Sprint goals and objectives for the data team"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.19"><title>Data Sprint Goals - AAIE Documentation</title><link rel="stylesheet" href="/_astro/_slug_.C7Ovrx20.css"><script type="module">document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector(".prose"),o=document.getElementById("toc");n&&o&&n.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((e,a)=>{const s=parseInt(e.tagName.charAt(1)),d=e.textContent,c=`heading-${a}`;e.id=c;const t=document.createElement("a");t.href=`#${c}`,t.textContent=d,t.className=`block text-sm text-gray-600 hover:text-gray-900 py-1 ${s>2?"ml-4":""}`,o.appendChild(t)})});
+</script></head> <body class="bg-gray-50 min-h-screen"> <header class="bg-white shadow-sm border-b border-gray-200"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center py-6"> <div class="flex items-center"> <h1 class="text-2xl font-bold text-gray-900">AAIE Documentation</h1> </div> <nav class="hidden md:flex space-x-8"> <a href="/" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Home</a> <a href="/aaie/" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Core AAIE</a> <a href="/aaie-data-hub/" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Data Hub</a> <a href="/aaie-model-lab/" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Model Lab</a> <a href="/aaie-design-engineering/" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Design Engineering</a> </nav> </div> </div> </header> <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">  <div class="px-4 sm:px-6 lg:px-8"> <!-- Breadcrumb Navigation --> <div class="mb-8"> <nav class="flex" aria-label="Breadcrumb"> <ol class="inline-flex items-center space-x-1 md:space-x-3"> <li class="inline-flex items-center"> <a href="/" class="text-gray-500 hover:text-gray-700">Home</a> </li> <li> <div class="flex items-center"> <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path> </svg> <a href="/deprecated" class="ml-1 text-sm font-medium text-gray-500 hover:text-gray-700 md:ml-2"> Deprecated </a> </div> </li> <li> <div class="flex items-center"> <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path> </svg> <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Data Sprint Goals</span> </div> </li> </ol> </nav> </div> <!-- Page Header --> <div class="mb-8"> <div class="flex items-center mb-4"> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"> Deprecated </span> <span class="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"> deprecated </span> </div> <h1 class="text-3xl font-bold text-gray-900 mb-4">Data Sprint Goals</h1> <p class="text-lg text-gray-600 mb-4">Sprint goals and objectives for the data team</p> <!-- Metadata --> <div class="flex flex-wrap items-center text-sm text-gray-500 space-x-4"> <span>By Data Team</span> <span>Published January 20, 2024</span>  <div class="flex items-center space-x-2"> <span>Tags:</span> <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"> deprecated </span><span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"> sprint </span><span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"> goals </span><span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"> data </span> </div> </div> </div> <!-- Main Content --> <div class="grid grid-cols-1 lg:grid-cols-4 gap-8"> <!-- Content Area --> <div class="lg:col-span-3"> <div class="prose prose-lg max-w-none bg-white rounded-lg shadow-sm p-8"> <h1 id="data-sprint-goals">Data Sprint Goals</h1>
+<p>This document outlines the sprint goals and objectives for the data team.</p>
+<hr>
+<h2 id="sprint-1-week-46">Sprint 1: Week 4–6</h2>
+<p><strong>Focus:</strong> Data sourcing, schema setup, pipeline foundations<br>
+<strong>Sprint Goal:</strong> Establish the foundational infrastructure and pipelines for all three datasets. Source and clean ethically safe data, generate synthetic samples, and validate schemas to ensure consistency and alignment across the project.</p>
+<h3 id="goals-per-dataset">Goals per Dataset</h3>
+<h4 id="1-submission-classification-ai-detection">1. Submission Classification (AI Detection)</h4>
+<ul>
+<li>Finalize and validate CSV schema</li>
+<li>Source and clean ~1000 human submissions</li>
+<li>Generate ~800 AI-written samples using GenAI</li>
+<li>Merge and QA <code>submission_classification.csv</code></li>
+</ul>
+<h4 id="2-feedback-annotation">2. Feedback Annotation</h4>
+<ul>
+<li>Finalize JSON schema</li>
+<li>Source rubric-linked datasets (e.g., DREsS, ASAP)</li>
+<li>Begin mapping rubric-annotated samples</li>
+<li>QA at least 500 human samples with rubric feedback</li>
+<li>Generate ~100 AI submissions with per-criterion rubric feedback</li>
+</ul>
+<h4 id="3-revision-chain">3. Revision Chain</h4>
+<ul>
+<li>Finalize JSON schema and validation script</li>
+<li>Review IteraTe and RE3 dataset for compatibility</li>
+<li>Extract and map ~600 real revision chains</li>
+<li>Generate ~200 synthetic revision chains using GenAI</li>
+<li>Design prompt templates (clarification, restructure, polish)</li>
+<li>Write scripts to simulate AI-human revision steps</li>
+</ul>
+<h3 id="sprint-1-deliverables-data-pillar">Sprint 1 Deliverables (Data Pillar)</h3>
+<ul>
+<li>Validated schemas (CSV &#x26; JSON) and documentation</li>
+<li>Cleaned and partially labeled datasets</li>
+<li>Working scripts for AI generation and data conversion</li>
+<li>Shared repo with folder structure, README, and sample entries</li>
+</ul>
+<hr>
+<h2 id="sprint-2-week-79">Sprint 2: Week 7–9</h2>
+<p><strong>Focus:</strong> Dataset completion, QA, and preparation for handoff<br>
+<strong>Sprint Goal:</strong> Complete and QA all datasets to prepare for downstream use by the LLM and Product teams. Ensure data quality, completeness, and ethical alignment.</p>
+<h3 id="goals-per-dataset-1">Goals per Dataset</h3>
+<h4 id="1-submission-classification-ai-detection-1">1. Submission Classification (AI Detection)</h4>
+<ul>
+<li>QA and finalize 4000+ entries
+<ul>
+<li>~2,500 human submissions</li>
+<li>~1,500 AI submissions</li>
+</ul>
+</li>
+<li>Tag subject domains and tools used</li>
+<li>Prepare metadata and README for LLM handoff</li>
+</ul>
+<h4 id="2-feedback-annotation-1">2. Feedback Annotation</h4>
+<ul>
+<li>Finalize and QA ~1000 rubric-aligned samples
+<ul>
+<li>At least 700 human samples</li>
+<li>At least 300 AI samples</li>
+</ul>
+</li>
+<li>Ensure rubric coverage across domains (min 3–5 disciplines)</li>
+<li>QA annotation consistency and fill gaps in feedback formats</li>
+<li>Document feedback pipeline and annotate examples clearly</li>
+</ul>
+<h4 id="3-revision-chain-1">3. Revision Chain</h4>
+<ul>
+<li>Finalize mapping and conversion of ~1000 real chains from RE3 / IteraTe</li>
+<li>Generate and validate ~500 synthetic revision chains using prompt templates</li>
+<li>QA structure (step order, author changes, timestamps, clarity of comments)</li>
+<li>Finalize script documentation and update README with examples</li>
+</ul>
+<h3 id="sprint-2-deliverables-data-pillar">Sprint 2 Deliverables (Data Pillar)</h3>
+<ul>
+<li>Final versions of all 3 datasets</li>
+<li>QA reports and validation outputs</li>
+<li>README + usage docs per dataset</li>
+<li>Dataset-ready package for ingestion by the LLM team</li>
+</ul> </div> </div> <!-- Sidebar --> <div class="lg:col-span-1"> <div class="sticky top-8"> <!-- Table of Contents --> <div class="bg-white rounded-lg shadow-sm p-6 mb-6"> <h3 class="text-lg font-semibold text-gray-900 mb-4">On This Page</h3> <nav class="space-y-2" id="toc"> <!-- TOC will be populated by JavaScript --> </nav> </div> <!-- Related Content -->  <!-- Quick Actions --> <div class="bg-white rounded-lg shadow-sm p-6 mt-6"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3> <div class="space-y-3"> <a href="/docs/sprint-goals.md" class="flex items-center text-sm text-gray-600 hover:text-gray-900"> <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path> </svg>
+View Source
+</a> <a href="https://github.com/KhushiChoubey26/aaie-documentation/edit/development/src/content/docs/sprint-goals.md" class="flex items-center text-sm text-gray-600 hover:text-gray-900"> <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path> </svg>
+Edit on GitHub
+</a> </div> </div> </div> </div> </div> </div>  </main> <footer class="bg-white border-t border-gray-200 mt-12"> <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"> <div class="text-center text-gray-500 text-sm"> <p>&copy; 2024 AAIE Project. All rights reserved.</p> </div> </div> </footer> </body></html> 

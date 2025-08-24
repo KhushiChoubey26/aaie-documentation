@@ -1,12 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 
-// Define the schema for documentation pages
-const docsCollection = defineCollection({
+// Core AAIE documentation collection
+const aaieCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    category: z.enum(['core', 'data-hub', 'model-lab', 'design-engineering', 'workflow', 'deprecated']).optional(),
+    category: z.enum(['core', 'general', 'overview']).optional(),
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
     date: z.date().optional(),
@@ -17,38 +17,96 @@ const docsCollection = defineCollection({
   }),
 });
 
-// Define the schema for meeting notes
-const meetingsCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    date: z.date(),
-    type: z.enum(['scrum', 'mentor', 'po-communication', 'general']),
-    attendees: z.array(z.string()).optional(),
-    agenda: z.array(z.string()).optional(),
-    summary: z.string().optional(),
-    actionItems: z.array(z.string()).optional(),
-    nextMeeting: z.date().optional(),
-  }),
-});
-
-// Define the schema for technical references
-const techRefCollection = defineCollection({
+// Data Hub documentation collection
+const dataHubCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    category: z.string().optional(),
+    category: z.enum(['data', 'datasets', 'processing', 'workflows']).optional(),
     tags: z.array(z.string()).optional(),
-    version: z.string().optional(),
     author: z.string().optional(),
     date: z.date().optional(),
     lastUpdated: z.date().optional(),
+    draft: z.boolean().optional().default(false),
+    order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
+  }),
+});
+
+// Model Lab documentation collection
+const modelLabCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    category: z.enum(['models', 'ml', 'training', 'deployment']).optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    date: z.date().optional(),
+    lastUpdated: z.date().optional(),
+    draft: z.boolean().optional().default(false),
+    order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
+  }),
+});
+
+// Design Engineering documentation collection
+const designEngineeringCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    category: z.enum(['design', 'ux', 'frontend', 'architecture']).optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    date: z.date().optional(),
+    lastUpdated: z.date().optional(),
+    draft: z.boolean().optional().default(false),
+    order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
+  }),
+});
+
+// Deprecated/Archive documentation collection
+const deprecatedCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    category: z.enum(['deprecated', 'archive', 'historical']).optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    date: z.date().optional(),
+    lastUpdated: z.date().optional(),
+    draft: z.boolean().optional().default(false),
+    order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
+  }),
+});
+
+// Forking Workflow documentation collection
+const forkingWorkflowCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    category: z.enum(['workflow', 'git', 'contribution', 'process']).optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    date: z.date().optional(),
+    lastUpdated: z.date().optional(),
+    draft: z.boolean().optional().default(false),
+    order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
   }),
 });
 
 export const collections = {
-  'docs': docsCollection,
-  'meetings': meetingsCollection,
-  'tech-refs': techRefCollection,
+  'aaie': aaieCollection,
+  'aaie-data-hub': dataHubCollection,
+  'aaie-model-lab': modelLabCollection,
+  'aaie-design-engineering': designEngineeringCollection,
+  'deprecated': deprecatedCollection,
+  'forking-worflow': forkingWorkflowCollection,
 };
