@@ -3,110 +3,248 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="AAIE Documentation">
-  <!-- Navigation Header -->
-  <header class="bg-white border-b border-gray-200">
+  <!-- Enhanced Navigation Header -->
+  <header class="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <div class="text-xl font-bold text-gray-900">AAIE Documentation</div>
-        <nav class="flex space-x-6">
-          <a href="/" class="text-gray-600 hover:text-gray-900">Home</a>
-          <a href="/aaie/overview/" class="text-gray-600 hover:text-gray-900">Core AAIE</a>
-          <a href="/aaie-data-hub/overview/" class="text-gray-600 hover:text-gray-900">Data Hub</a>
-          <a href="/aaie-model-lab/overview/" class="text-gray-600 hover:text-gray-900">Model Lab</a>
-          <a href="/aaie-design-engineering/overview/" class="text-gray-600 hover:text-gray-900">Design Engineering</a>
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="text-2xl font-bold text-gradient">AAIE Documentation</div>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/aaie/overview/" class="nav-link">Core AAIE</a>
+          <a href="/aaie-data-hub/overview/" class="nav-link">Data Hub</a>
+          <a href="/aaie-model-lab/overview/" class="nav-link">Model Lab</a>
+          <a href="/aaie-design-engineering/overview/" class="nav-link">Design Engineering</a>
         </nav>
+        <div class="md:hidden">
+          <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="container mx-auto px-4 py-8">
-    <!-- Hero Section -->
-    <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        AAIE Documentation
-      </h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Comprehensive documentation for the Artificial Assessment Intelligence for Educators (AAIE) project. Explore architecture diagrams, meeting notes, technical references, and more.
-      </p>
-    </div>
+  <main class="min-h-screen">
+    <!-- Hero Section with Enhanced Styling -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+      <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="section-header fade-in">
+          <h1 class="section-title">
+            AAIE Documentation
+          </h1>
+          <p class="section-subtitle">
+            Comprehensive documentation for the <span class="font-semibold text-blue-600">Artificial Assessment Intelligence for Educators (AAIE)</span> project. 
+            Explore architecture diagrams, meeting notes, technical references, and more.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="#documentation" class="btn-primary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+              Explore Documentation
+            </a>
+            <a href="/forking-worflow/overview/" class="btn-secondary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Documentation Sections Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      <!-- Core AAIE -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Core AAIE</h2>
-        <p class="text-gray-600 mb-4">
-          Core project documentation, architecture, and implementation details.
-        </p>
-        <a href="/aaie/overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
-      </div>
+    <section id="documentation" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 slide-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Documentation Categories</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose a category to explore our comprehensive documentation and resources</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Core AAIE -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Core AAIE</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Core project documentation, architecture, and implementation details.
+            </p>
+            <a href="/aaie/overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
 
-      <!-- Data Hub -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Data Hub</h2>
-        <p class="text-gray-600 mb-4">
-          Data management, storage, and processing documentation.
-        </p>
-        <a href="/aaie-data-hub/overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
-      </div>
+          <!-- Data Hub -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Data Hub</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Data management, storage, and processing documentation.
+            </p>
+            <a href="/aaie-data-hub/overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
 
-      <!-- Model Lab -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Model Lab</h2>
-        <p class="text-gray-600 mb-4">
-          AI model development, training, and evaluation documentation.
-        </p>
-        <a href="/aaie-model-lab/overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
-      </div>
+          <!-- Model Lab -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Model Lab</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              AI model development, training, and evaluation documentation.
+            </p>
+            <a href="/aaie-model-lab/overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
 
-      <!-- Design Engineering -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Design Engineering</h2>
-        <p class="text-gray-600 mb-4">
-          System design, architecture, and engineering documentation.
-        </p>
-        <a href="/aaie-design-engineering/overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
-      </div>
+          <!-- Design Engineering -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Design Engineering</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              System design, architecture, and engineering documentation.
+            </p>
+            <a href="/aaie-design-engineering/overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
 
-      <!-- Forking Workflow -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Forking Workflow</h2>
-        <p class="text-gray-600 mb-4">
-          Git workflow and collaboration guidelines for the project.
-        </p>
-        <a href="/forking-worflow/overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
-      </div>
+          <!-- Forking Workflow -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Forking Workflow</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Git workflow and collaboration guidelines for the project.
+            </p>
+            <a href="/forking-worflow/overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
 
-      <!-- Deprecated -->
-      <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Deprecated</h2>
-        <p class="text-gray-600 mb-4">
-          Outdated documentation and deprecated features.
-        </p>
-        <a href="/deprecated/archive-overview/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-          Explore →
-        </a>
+          <!-- Deprecated -->
+          <div class="card card-hover p-8 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Deprecated</h3>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Outdated documentation and deprecated features.
+            </p>
+            <a href="/deprecated/archive-overview/" class="btn-primary w-full justify-center">
+              Explore →
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Getting Started Section -->
-    <div class="bg-blue-50 rounded-lg p-6 text-center">
-      <h2 class="text-lg font-semibold text-blue-900 mb-2">Getting Started</h2>
-      <p class="text-blue-700 mb-4">
-        Choose a section above to explore the documentation, or check out our 
-        <a href="/forking-worflow/overview/" class="underline font-medium">forking workflow</a> 
-        to understand how to contribute.
-      </p>
-    </div>
+    <!-- Enhanced Getting Started Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-12 shadow-soft border border-white/20">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-8">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Getting Started</h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Choose a section above to explore the documentation, or check out our 
+              <a href="/forking-worflow/overview/" class="text-blue-600 hover:text-blue-800 font-semibold underline decoration-2 underline-offset-4">forking workflow</a> 
+              to understand how to contribute to the project.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/forking-worflow/overview/" class="btn-primary">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                Learn Workflow
+              </a>
+              <a href="#documentation" class="btn-secondary">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+                Browse Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex items-center justify-center mb-6">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-bold">AAIE Documentation</span>
+      </div>
+      <p class="text-gray-400 mb-4">Comprehensive documentation for the Artificial Assessment Intelligence for Educators project</p>
+      <div class="text-sm text-gray-500">
+        © 2024 AAIE Team. Built with Astro and Tailwind CSS.
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .bg-grid-pattern {
+      background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </Layout>
